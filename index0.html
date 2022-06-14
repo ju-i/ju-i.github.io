@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         header {
+            width:95%;
+            height:150px;
+            border:1px solid #cccccc;
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+          @keyframes textcoloranimation{
+            0%{
+                color:#B2EBF4;
+            }
+            40%{
+                color:#B7F0B1;
+            }
+            100%{
+                color:#D1B2FF;
+            }
+        }
+        h1{
+            animation-name:textcoloranimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            margin: 45px;
+            margin-left: 700px;
+        }
+        #top{
+            float:right;
+            margin:-30px;
+            margin-right: 50px;
+        }
+        nav{
+            border: 0px solid #cccccc;
+            width:95%;
+            height:100px;
+            margin-top: 20px;
+        }
+        nav li{
+            display: inline;
+            margin: 50px 90px;
+        }
+        section{
+            float:left;
+            height: 70%;
+            width: 100%;
+            border:0px solid #cccccc;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .slideshow-container{
+          margin-top: 50px;
+          margin-left: none;
+        }
+        #m{
+          margin-left: 50px;
+          
+        }
+        #n{
+          margin-left: 500px;
+          margin-top:-300px;
+        }
+        footer{
+            border: 1px solid #cccccc;
+            width:95%;
+            height:100px;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+        .clear{
+            clear:both;
+        }
+        #adress{
+            float:left;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin:10px
+        }
+        h5{
+            margin: 30px;
+        }
+        #customer{
+            float:right;
+            margin-top: -20px;
+            padding-right: 50px;
+        }
+        #page{
+          background-color: bisque;
+            width: 1800px;
+            height: 1700px;
+            margin: auto;
+            border:0px solid #cccccc;
+        }
+        #menu{
+            float: left;
+            font-weight: none;
+            margin-top: 0px;
+        }
+        #menu li{
+            padding: 20px;
+            border-bottom: 0px;
+            line-height: 30px;
+        }
+        a{
+            text-decoration: none;  
+            color: black;
+        }
+        
+        </style>
+
+</head>
+<body id="page">
+    <header>
+      <div>
+      <h1>SKATEBOARD SHOP</h1>
+      </div>
+      <div id="top">
+          로그인 |  회원가입 | 장바구니
+      </div>
+  </header>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="./index.html"><strong>HOME</strong></a></li>
+         <li><a href="./index2.html">SKATEBOARD SHOP</a></li>
+         <li><a href="./index3.html">SKATEBOARD </a></li>
+         <li><a href="./index4.html">LONGBOARD</a></li>
+         <li>Q&A</li>
+         
+    </ul>
+    </nav>
+
+    <section>
+        
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="./2.png" , width="1800px", height="600px">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./3.png", width="1800px", height="600px">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./1.png" , width="1800px", height="600px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./60.jpg" , width="1800px", height="600px">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+<div id="m">
+  <img src="./17.gif", width="300px", height="350px">
+  <div id="n">
+  <h2> 보드를 더 즐겁게 탈 수 있는 보드기술들 </h2>
+  
+         <li><a href="./index02.html">heel flip(힐플립)</a></li>
+          <br>
+          <li><a href="./index0.html"><strong>ollie(알리):데크를 밟아서 스케이트보드와 함께 점프하는 트릭.</strong></a></li>
+          <br>
+          <li><a href="./index01.html">push off(푸쉬오프)</a></li>
+  </div>
+</div>
+
+      </section>
+   
+
+
+      <div class="clear"></div>
+    <footer>
+      <div id="address">
+       <h5>대표:홍주이 | 문의사항:010-0000-0000</h5>
+       </div>
+       <div id="customer">
+           고객센터:1588-3456
+       </div>
+    </footer> 
+  </body>
+  </html>
